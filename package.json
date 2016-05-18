@@ -1,0 +1,38 @@
+{
+  "name": "github-connector",
+  "version": "0.0.1",
+  "description": "Gaia GitHub connector",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gaia-adm/github-connector.git"
+  },
+  "scripts": {
+    "start": "node ./server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "commander": "^2.9.0",
+    "content-disposition": "^0.5.0",
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "grunt": "^1.0.1",
+    "http-status-codes": "^1.0.5",
+    "log4js": "^0.6.29",
+    "octonode": "^0.7.5",
+    "q": "^1.4.1",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-mocha-istanbul": "^4.0.2",
+    "grunt-mocha-test": "^0.12.7",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
+    "mocha-junit-reporter": "^1.11.1"
+  }
+}
