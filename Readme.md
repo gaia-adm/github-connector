@@ -80,7 +80,9 @@ NOTES:
 * "organization" and "repository" fields are mutually exclusive, only one should be provided; if both provided, "repository" field is ignored and webhook is set on organization level  
 * "events" field is optional, default values is ["push"]  
 * setting webhook for multiple events must be done carefully due to payload differences, since data is stored together and should be querieable; so that event types should not share the same webhook if a timestamp field and most of importand data fields are different between the event types. Of course, this limitation is Gaia specific and not relevant if you only want to send webhook to tools like Slack  
-* "Disable SSL validation" and "Active" options are not supported (default values are true for both validateSSL and active)  
+* "Disable SSL validation" and "Active" options are not supported (default values are true for both validateSSL and active)
+[*GitHub API behind the scene - organization level*](https://developer.github.com/v3/orgs/hooks/#create-a-hook)
+[*GitHub API behind the scene - repository level*](https://developer.github.com/v3/repos/hooks/#create-a-hook)
  
 ***GetAuthorizationToken*** - generate Oauth2 token for GH-Connector on behalf of the GitHub user that logs in  
 *GET* /ghc/auth  
