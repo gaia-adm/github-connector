@@ -40,8 +40,8 @@ Multiple Oauth applications can be registered (per Gaia environment).
 
 ***GetUserDetails*** - get user details for the user name provided in request  
 *GET* /ghc/users/:gitUserName  
-*Headers*: GitToken `<token>`
-*Response*: 200/500 with GitHub user details object  
+*Headers*: GitToken `<token>`  
+*Response*: 200/500 with GitHub user details object    
 [*GitHub API behind the scene*](https://developer.github.com/v3/users/#get-a-single-user)  
 
 ***GetRepoWebhooks*** - get all webhooks configured for the repository  
@@ -49,7 +49,7 @@ Multiple Oauth applications can be registered (per Gaia environment).
 *Headers*: GitToken: `<token>`  
 *Response*: 200/500 with array of webhooks configured for the repository  
 NOTES:  
-* Works also when repository is owned by organization with third-party access restricted and without special grant for gaia-adm/github-connector  
+  - Works also when repository is owned by organization with third-party access restricted and without special grant for gaia-adm/github-connector  
 [*GitHub API behind the scene*](https://developer.github.com/v3/repos/hooks/#list-hooks)
 
 
@@ -81,7 +81,7 @@ NOTES:
 * "events" field is optional, default values is ["push"]  
 * setting webhook for multiple events must be done carefully due to payload differences, since data is stored together and should be querieable; so that event types should not share the same webhook if a timestamp field and most of importand data fields are different between the event types. Of course, this limitation is Gaia specific and not relevant if you only want to send webhook to tools like Slack  
 * "Disable SSL validation" and "Active" options are not supported (default values are true for both validateSSL and active)
-[*GitHub API behind the scene - organization level*](https://developer.github.com/v3/orgs/hooks/#create-a-hook)
+[*GitHub API behind the scene - organization level*](https://developer.github.com/v3/orgs/hooks/#create-a-hook)  
 [*GitHub API behind the scene - repository level*](https://developer.github.com/v3/repos/hooks/#create-a-hook)
  
 ***GetAuthorizationToken*** - generate Oauth2 token for GH-Connector on behalf of the GitHub user that logs in  
